@@ -4,13 +4,19 @@ version = "0.1.0"
 description = ""
 authors = ["Evgenii Sapozhkov <sapozhkovevgenii@gmail.com>"]
 readme = "README.md"
-packages = [{include = "test_task_string_url_pytest"}]
+packages = [{include = "task_string_url_pytest"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+validators = "^0.20.0"
+requests = "2.28.1"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^6.0.0"
+pytest = "^7.2.0"
+
+[tool.poetry.scripts]
+my-script = "task_string_url_pytest.main:work"
 
 [build-system]
 requires = ["poetry-core"]
