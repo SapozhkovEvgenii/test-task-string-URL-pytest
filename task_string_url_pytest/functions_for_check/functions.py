@@ -16,7 +16,7 @@ def check_url(*urls):
     return checked_strings
 
 
-def check_server_connection_get(url: str, session):
+def check_server_connection_get(url: str, session: requests.Session):
     """ server connection check using GET method """
     try:
         response = session.get(url)
